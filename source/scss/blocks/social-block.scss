@@ -17,6 +17,7 @@
   height: 4rem;
   color: $c-dark;
   border-radius: 50%;
+  transition: color $speed;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -35,6 +36,7 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transition: all $speed;
   }
 
   svg {
@@ -89,6 +91,7 @@
   margin-top: 1.5rem;
   opacity: 0;
   pointer-events: none;
+  transition: opacity $speed;
 
   @media (min-width: $stop-scaling) {
     margin-top: 15px;
@@ -145,6 +148,9 @@
   li {
     flex: none;
     margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: all $speed;
 
     @media (min-width: $stop-scaling) {
       margin-bottom: 5px;
@@ -157,6 +163,29 @@
     @media (max-width: $mobile) and (orientation: landscape) {
       margin: 0 1.25rem;
     }
+
+    .social-block--active & {
+      opacity: 1;
+      transform: none;
+    }
+
+    &:nth-child(1) {
+      .social-block--active & {
+        transition-delay: 0.3s;
+      }
+    }
+
+    &:nth-child(2) {
+      .social-block--active & {
+        transition-delay: 0.4s;
+      }
+    }
+
+    &:nth-child(3) {
+      .social-block--active & {
+        transition-delay: 0.5s;
+      }
+    }
   }
 }
 
@@ -168,6 +197,7 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  transition: all $speed;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
