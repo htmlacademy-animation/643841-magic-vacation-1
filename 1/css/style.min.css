@@ -1887,7 +1887,7 @@ img {
       width: 0;
       height: 2px;
       background-color: #ffffff;
-      left: 0;
+      right: 0;
       transition: all 0.2s; }
       @media (max-width: 1024px) and (orientation: portrait) {
         .page-header__menu a::after {
@@ -1905,6 +1905,7 @@ img {
       color: #a67ee5;
       outline: none; }
       .page-header__menu a:hover::after, .page-header__menu a:focus::after {
+        left: 0;
         width: 100%;
         background-color: #a67ee5; }
 
